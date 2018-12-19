@@ -1,0 +1,39 @@
+- Name: Tapas Ops
+  description: Tapas folder to host Prod affecting jobs
+  groups:
+    TapasOpsAdmin:
+      members:
+      - jenkins_tp
+      - jenkins_pt
+      - e058870
+      roles:
+      - FolderAdmin
+    TapasOpsUser:
+      members:
+      - jenkins_tp_ops
+      roles:
+      - tapas-test
+- Name: Tapas Scripts
+  description: Tapas folder to host Scripts
+  groups:
+    TapasOpsAdmin:
+      members:
+      - script_tp
+      - script_pt
+      roles:
+      - FolderAdmin
+    TapasOpsUser:
+      members:
+      - jenkins_tp_ops
+      roles:
+      - tapas-test
+
+- Name: Zing
+  description: Test folder
+  groups:
+    Admin:
+      members:
+      - script_tp
+      - script_pt
+      roles:
+      - FolderAdmin
