@@ -12,10 +12,7 @@ import nectar.plugins.rbac.groups.*
 import nectar.plugins.rbac.roles.*
 import hudson.FilePath
 import hudson.FilePath.FileCallable;
-pipeline {
-  stages {
-        stage('Build') { 
-            steps {
+node {
 folderData = readYaml(file: "folders.yaml")
   folderData.each {
     String folderName = it.Name.replaceAll("\\s","")
@@ -25,7 +22,5 @@ folderData = readYaml(file: "folders.yaml")
     println(folderDisplayName)
     println(folderDisplayName)
   }
-            }
-        }
-  }
+           
 }
